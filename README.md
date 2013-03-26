@@ -1,7 +1,7 @@
 BBUIEvo
 =======
 
-Useful UI elements - /source contains code for them. root directory contains UI test app.
+Useful UI elements - bbuievo/source contains UI code. bbuievo/ contains UI test app.
 
 1. BBHyperLabel - simple 'hyperlink' like label.
 
