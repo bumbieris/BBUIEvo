@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="mfP-95-k45">
+    <dependencies>
+        <deployment version="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Hwu-Dq-D5x">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="mfP-95-k45" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="paa-Ly-EzF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wsh-ol-A6g" kind="relationship" relationship="rootViewController" id="wUn-W9-1RX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpf-k4-DuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-475" y="-103"/>
+        </scene>
+        <!--Test View Controller - Foo-->
+        <scene sceneID="mZX-dQ-jZn">
+            <objects>
+                <viewController storyboardIdentifier="Test0" title="Foo" id="Wsh-ol-A6g" customClass="BBTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Hf-Kc-j6h">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Link Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nnZ-P8-0V1" customClass="BBHyperLabel">
+                                <rect key="frame" x="121" y="190" width="78" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Link Label No Underline" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tly-pP-PGu" customClass="BBHyperLabel">
+                                <rect key="frame" x="74" y="272" width="196" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Foo" id="0F7-Pf-gtc"/>
+                    <connections>
+                        <outlet property="label" destination="nnZ-P8-0V1" id="XMl-D5-uFj"/>
+                        <outlet property="labelNoUnderline" destination="tly-pP-PGu" id="kVt-Uz-R0u"/>
+                        <segue destination="lya-uY-oQh" kind="push" identifier="Foo" id="Ulf-qC-djY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xIr-tg-4hU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="-103"/>
+        </scene>
+        <!--Test View Controller - Bar-->
+        <scene sceneID="6I6-hb-gXB">
+            <objects>
+                <viewController storyboardIdentifier="Test1" title="Bar" id="lya-uY-oQh" customClass="BBTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YR2-Cp-SAb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Link Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Xm-Oy-Xm4" customClass="BBHyperLabel">
+                                <rect key="frame" x="121" y="204" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bar" id="gzd-eD-8nz"/>
+                    <connections>
+                        <outlet property="label" destination="0Xm-Oy-Xm4" id="Oj9-6b-ong"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZaS-4f-GBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="-103"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="BBHyperLabel" superclassName="UILabel">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBHyperLabel.h"/>
+        </class>
+        <class className="BBTestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBTestViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="label" candidateClass="BBHyperLabel"/>
+                <relationship kind="outlet" name="labelNoUnderline" candidateClass="BBHyperLabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
