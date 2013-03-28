@@ -42,6 +42,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="PKu-MQ-vtk" customClass="BBSpinButton">
+                                <rect key="frame" x="20" y="61" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="spinButtonPressed:" destination="Wsh-ol-A6g" eventType="touchUpInside" id="7bq-98-ntp"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -49,6 +57,7 @@
                     <connections>
                         <outlet property="label" destination="nnZ-P8-0V1" id="XMl-D5-uFj"/>
                         <outlet property="labelNoUnderline" destination="tly-pP-PGu" id="kVt-Uz-R0u"/>
+                        <outlet property="spinButton" destination="PKu-MQ-vtk" id="LgZ-Vi-nPt"/>
                         <segue destination="lya-uY-oQh" kind="push" identifier="Foo" id="Ulf-qC-djY"/>
                     </connections>
                 </viewController>
@@ -88,11 +97,20 @@
         <class className="BBHyperLabel" superclassName="UILabel">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BBHyperLabel.h"/>
         </class>
+        <class className="BBSpinButton" superclassName="UIControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BBSpinButton.h"/>
+            <relationships>
+                <relationship kind="outlet" name="impLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="impSpinner" candidateClass="UIActivityIndicatorView"/>
+            </relationships>
+        </class>
         <class className="BBTestViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BBTestViewController.h"/>
             <relationships>
+                <relationship kind="action" name="spinButtonPressed:"/>
                 <relationship kind="outlet" name="label" candidateClass="BBHyperLabel"/>
                 <relationship kind="outlet" name="labelNoUnderline" candidateClass="BBHyperLabel"/>
+                <relationship kind="outlet" name="spinButton" candidateClass="BBSpinButton"/>
             </relationships>
         </class>
     </classes>

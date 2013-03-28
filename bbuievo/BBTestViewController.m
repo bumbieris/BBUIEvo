@@ -8,10 +8,13 @@
 
 #import "BBTestViewController.h"
 #import "BBHyperLabel.h"
+#import "BBSpinButton.h"
 
 @interface BBTestViewController ()
 @property (nonatomic, strong) IBOutlet BBHyperLabel* label;
 @property (nonatomic, strong) IBOutlet BBHyperLabel* labelNoUnderline;
+@property (nonatomic, strong) IBOutlet BBSpinButton* spinButton;
+- (IBAction)spinButtonPressed:(id)sender;
 @end
 
 @implementation BBTestViewController
@@ -55,6 +58,19 @@
         [self performSegueWithIdentifier:@"Foo" sender:self];
     }else
         [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)spinButtonPressed:(id)sender
+{
+    if (![_spinButton active])
+        [_spinButton showSpinner];
+    else
+        [_spinButton hideSpinner];
+}
+
+- (void) foo
+{
+    
 }
 
 @end
