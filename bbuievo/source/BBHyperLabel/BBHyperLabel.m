@@ -53,11 +53,22 @@ _Pragma("clang diagnostic pop") \
     [self transitionSelected: YES];
 }
 
+- (void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint p = [[touches anyObject] locationInView:self];
+    if (!CGRectContainsPoint(self.bounds, p)){
+        self.down = NO;
+        [self transitionSelected: FALSE];
+    }
+}
+
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    self.down = NO;
-    if (_action)
-        SuppressPerformSelectorLeakWarning([self.target performSelector:self.action withObject:self]);
+    if (self.down){
+        self.down = NO;
+        if (_action)
+            SuppressPerformSelectorLeakWarning([self.target performSelector:self.action withObject:self]);
+    }
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -99,6 +110,7 @@ _Pragma("clang diagnostic pop") \
     self.downColor = [UIColor cyanColor];
     self.textColor = self.normalColor;
     self.underline = TRUE;
+    self.multipleTouchEnabled = FALSE;
 }
 
 - (void) transitionSelected: (BOOL) tf
