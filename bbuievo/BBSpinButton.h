@@ -17,6 +17,8 @@
 @property (assign, nonatomic) UIFont* font;
 @property (strong, nonatomic) UIColor* textColor;
 @property (strong, nonatomic) UIColor* highlightColor;
+@property (strong, nonatomic) UIColor* highlightBkColor;
+@property (strong, nonatomic) UIColor* normalBkColor;
 
 - (void) showSpinner;
 - (void) hideSpinner;

@@ -10,7 +10,7 @@
 
 @interface BBSpinButton()
 
-@property (assign) BOOL touchUp;
+@property (assign, nonatomic) BOOL touchUp;
 @property (weak, nonatomic) IBOutlet UILabel* impLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* impSpinner;
 @property (nonatomic, assign) CGFloat spinnerLabelWidth;
@@ -23,6 +23,8 @@
 @end
 
 @implementation BBSpinButton
+
+@synthesize touchUp = _touchUp;
 
 - (void) setText:(NSString *)text
 {
@@ -58,6 +60,19 @@
     if (!_touchUp) self.impLabel.textColor = highlightColor;
 }
 
+- (void) setHighlightBkColor:(UIColor *)highlightBkColor
+{
+    _highlightBkColor = highlightBkColor;
+    if (!_touchUp) self.backgroundColor = highlightBkColor;
+}
+
+- (void) setNormalBkColor:(UIColor *)backgroundColor
+{
+    if (!_touchUp)
+        self.backgroundColor=backgroundColor;
+    _normalBkColor = backgroundColor;
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -78,26 +93,22 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    _touchUp = NO;
-    self.impLabel.textColor = _highlightColor;
+    [self setTouchUp:FALSE];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (!_touchUp)
         [self sendActionsForControlEvents:UIControlEventTouchUpInside];
-    _touchUp = YES;
-    self.impLabel.textColor = _textColor;
+    [self setTouchUp:TRUE];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint p = [[touches anyObject] locationInView:self];
     if (!CGRectContainsPoint(self.bounds, p)){
-        self.impLabel.textColor = _textColor;
-        _touchUp = YES;
+        [self setTouchUp:TRUE];
     }
-    
 }
 
 - (void) showSpinner
@@ -130,11 +141,14 @@
     _touchUp = YES;
     _highlightColor = [UIColor blueColor];
     _textColor = [UIColor blackColor];
+    _normalBkColor = [UIColor whiteColor];
+    _highlightBkColor = [UIColor lightGrayColor];
     
     self.userInteractionEnabled = YES;
     self.layer.borderColor = [[UIColor grayColor] CGColor];
     self.layer.borderWidth = 1.f;
     self.layer.cornerRadius = 5.f;
+    self.multipleTouchEnabled = FALSE;
     
     _spinnerLabelWidth = 10.f;
     
@@ -142,6 +156,7 @@
     NSArray* items = [nib instantiateWithOwner:self options:nil];
     UIView* view = [items objectAtIndex:0];
     view.frame = self.bounds;
+    view.backgroundColor = [UIColor clearColor];
     [self addSubview:view];
     self.impSpinner.alpha = 0.f;
 
@@ -173,6 +188,24 @@
     CGRect f = self.impLabel.frame;
     f.origin.x= xMid;
     self.impLabel.frame = f;
+}
+
+- (void) setTouchUp:(BOOL)touchUp
+{
+    _touchUp = touchUp;
+    
+    if (!_touchUp){
+        self.impLabel.textColor = _highlightColor;
+        self.backgroundColor = _highlightBkColor;
+    }else{
+        self.impLabel.textColor = _textColor;
+        self.backgroundColor = _normalBkColor;
+    }
+}
+
+- (BOOL) touchUp
+{
+    return _touchUp;
 }
 
 @end
