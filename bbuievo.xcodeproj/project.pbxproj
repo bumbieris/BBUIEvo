@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		183CAC7B17014DCA002F521D /* BBHyperLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 183CAC7A17014DCA002F521D /* BBHyperLabel.m */; };
 		183CAC7D17014E69002F521D /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183CAC7C17014E69002F521D /* test.storyboard */; };
 		183CAC8017014EA5002F521D /* BBTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183CAC7F17014EA5002F521D /* BBTestViewController.m */; };
-		1899E1551703C85F00D9FEC8 /* BBSpinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1899E1541703C85F00D9FEC8 /* BBSpinButton.m */; };
 		1899E1571703CFA300D9FEC8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1899E1561703CFA200D9FEC8 /* QuartzCore.framework */; };
-		1899E1591703D13C00D9FEC8 /* BBSpinButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1899E1581703D13C00D9FEC8 /* BBSpinButton.xib */; };
+		1899E1611703EE4E00D9FEC8 /* BBHyperLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1899E15C1703EE4E00D9FEC8 /* BBHyperLabel.m */; };
+		1899E1621703EE4E00D9FEC8 /* BBSpinButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1899E15F1703EE4E00D9FEC8 /* BBSpinButton.m */; };
+		1899E1631703EE4E00D9FEC8 /* BBSpinButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1899E1601703EE4E00D9FEC8 /* BBSpinButton.xib */; };
 		18F58FC317014AF000C2930C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F58FC217014AF000C2930C /* UIKit.framework */; };
 		18F58FC517014AF000C2930C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F58FC417014AF000C2930C /* Foundation.framework */; };
 		18F58FC717014AF000C2930C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F58FC617014AF000C2930C /* CoreGraphics.framework */; };
@@ -25,15 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		183CAC7917014DCA002F521D /* BBHyperLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBHyperLabel.h; path = source/BBHyperLabel.h; sourceTree = "<group>"; };
-		183CAC7A17014DCA002F521D /* BBHyperLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBHyperLabel.m; path = source/BBHyperLabel.m; sourceTree = "<group>"; };
 		183CAC7C17014E69002F521D /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		183CAC7E17014EA5002F521D /* BBTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTestViewController.h; sourceTree = "<group>"; };
 		183CAC7F17014EA5002F521D /* BBTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTestViewController.m; sourceTree = "<group>"; };
-		1899E1531703C85F00D9FEC8 /* BBSpinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSpinButton.h; sourceTree = "<group>"; };
-		1899E1541703C85F00D9FEC8 /* BBSpinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSpinButton.m; sourceTree = "<group>"; };
 		1899E1561703CFA200D9FEC8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		1899E1581703D13C00D9FEC8 /* BBSpinButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSpinButton.xib; sourceTree = "<group>"; };
+		1899E15B1703EE4E00D9FEC8 /* BBHyperLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBHyperLabel.h; sourceTree = "<group>"; };
+		1899E15C1703EE4E00D9FEC8 /* BBHyperLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBHyperLabel.m; sourceTree = "<group>"; };
+		1899E15E1703EE4E00D9FEC8 /* BBSpinButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBSpinButton.h; sourceTree = "<group>"; };
+		1899E15F1703EE4E00D9FEC8 /* BBSpinButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBSpinButton.m; sourceTree = "<group>"; };
+		1899E1601703EE4E00D9FEC8 /* BBSpinButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBSpinButton.xib; sourceTree = "<group>"; };
 		18F58FBF17014AF000C2930C /* bbuievo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bbuievo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F58FC217014AF000C2930C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F58FC417014AF000C2930C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,13 +67,31 @@
 		183CAC7817014DAE002F521D /* source */ = {
 			isa = PBXGroup;
 			children = (
-				183CAC7917014DCA002F521D /* BBHyperLabel.h */,
-				183CAC7A17014DCA002F521D /* BBHyperLabel.m */,
-				1899E1531703C85F00D9FEC8 /* BBSpinButton.h */,
-				1899E1541703C85F00D9FEC8 /* BBSpinButton.m */,
-				1899E1581703D13C00D9FEC8 /* BBSpinButton.xib */,
+				1899E15A1703EE4E00D9FEC8 /* BBHyperLabel */,
+				1899E15D1703EE4E00D9FEC8 /* BBSpinButton */,
 			);
 			name = source;
+			sourceTree = "<group>";
+		};
+		1899E15A1703EE4E00D9FEC8 /* BBHyperLabel */ = {
+			isa = PBXGroup;
+			children = (
+				1899E15B1703EE4E00D9FEC8 /* BBHyperLabel.h */,
+				1899E15C1703EE4E00D9FEC8 /* BBHyperLabel.m */,
+			);
+			name = BBHyperLabel;
+			path = source/BBHyperLabel;
+			sourceTree = "<group>";
+		};
+		1899E15D1703EE4E00D9FEC8 /* BBSpinButton */ = {
+			isa = PBXGroup;
+			children = (
+				1899E15E1703EE4E00D9FEC8 /* BBSpinButton.h */,
+				1899E15F1703EE4E00D9FEC8 /* BBSpinButton.m */,
+				1899E1601703EE4E00D9FEC8 /* BBSpinButton.xib */,
+			);
+			name = BBSpinButton;
+			path = source/BBSpinButton;
 			sourceTree = "<group>";
 		};
 		18F58FB617014AF000C2930C = {
@@ -189,7 +207,7 @@
 				18F58FD717014AF000C2930C /* Default@2x.png in Resources */,
 				18F58FD917014AF000C2930C /* Default-568h@2x.png in Resources */,
 				183CAC7D17014E69002F521D /* test.storyboard in Resources */,
-				1899E1591703D13C00D9FEC8 /* BBSpinButton.xib in Resources */,
+				1899E1631703EE4E00D9FEC8 /* BBSpinButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,9 +220,9 @@
 			files = (
 				18F58FCF17014AF000C2930C /* main.m in Sources */,
 				18F58FD317014AF000C2930C /* BBAppDelegate.m in Sources */,
-				183CAC7B17014DCA002F521D /* BBHyperLabel.m in Sources */,
 				183CAC8017014EA5002F521D /* BBTestViewController.m in Sources */,
-				1899E1551703C85F00D9FEC8 /* BBSpinButton.m in Sources */,
+				1899E1611703EE4E00D9FEC8 /* BBHyperLabel.m in Sources */,
+				1899E1621703EE4E00D9FEC8 /* BBSpinButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
